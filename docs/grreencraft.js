@@ -60,7 +60,7 @@ class GRWorld {
   }
 
   generateCaves(blocks) {
-    const caveChance = 0.02;
+    const caveChance = 0.04;
 
     for (let x = 0; x < this.width; x++) {
       for (let y = 10; y < this.height; y++) {
@@ -70,7 +70,7 @@ class GRWorld {
               const nx = x + dx;
               const ny = y + dy;
               if (
-                nx >= 0 &&
+                nx >= 1 &&
                 ny >= 0 &&
                 nx < this.width &&
                 ny < this.height &&
@@ -89,8 +89,8 @@ class GRWorld {
     const shaftCount = 2;
 
     for (let i = 0; i < shaftCount; i++) {
-      const startX = Math.floor(Math.random() * (this.width - 20)) + 10;
-      const startY = Math.floor(Math.random() * (this.height - 20)) + 15;
+      const startX = Math.floor(Math.random() * (this.width - 15)) + 5;
+      const startY = Math.floor(Math.random() * (this.height - 15)) + 10;
       const length = Math.floor(Math.random() * 25) + 15;
 
       for (let x = startX; x < startX + length && x < this.width - 1; x++) {
@@ -165,7 +165,7 @@ class GRRenderer {
     this.canvas = canvas;
     this.ctx = canvas.getContext("2d");
     this.world = world;
-    this.blockSize = 32;
+    this.blockSize = 48;
 
     this.textures = {
       sky: this.loadTexture("textures/sky.png"),
