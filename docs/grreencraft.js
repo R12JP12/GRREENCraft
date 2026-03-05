@@ -230,7 +230,7 @@ class GRRenderer {
     }
 
     // PLAYER
-    this.load.Texture = "player";
+    ctx.fillstyle(green);
     ctx.fillRect(
       canvas.width / 2 - blockSize / 2,
       canvas.height / 2 - blockSize / 2,
