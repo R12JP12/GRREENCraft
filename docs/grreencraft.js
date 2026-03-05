@@ -265,8 +265,8 @@ class GRPlayer {
     this.jumpForce = -0.25;
     this.grounded = false;
 
-    this.width = 16 / 16;  // scaled to block units
-    this.height = 32 / 32; // scaled to block units
+    this.width = 8 / 8;  // scaled to block units
+    this.height = 16 / 16; // scaled to block units
   }
 }
 
