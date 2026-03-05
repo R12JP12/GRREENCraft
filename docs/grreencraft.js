@@ -191,13 +191,13 @@ class GRRenderer {
     const { ctx, blockSize, world, textures, canvas } = this;
 
     // SKY (non-repeating)
-    const skyTex = textures.sky;
-    if (skyTex && skyTex.complete) {
-      ctx.drawImage(skyTex, 0, 0, canvas.width, canvas.height);
-    } else {
-      ctx.fillStyle = "#87ceeb";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-    }
+const skyTex = textures.sky;
+if (skyTex && skyTex.complete) {
+  ctx.drawImage(skyTex, 0, 0, canvas.width, canvas.height);
+} else {
+  ctx.fillStyle = "#87ceeb";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+}
 
     const cameraX = player.x * blockSize - canvas.width / 2;
     const cameraY = player.y * blockSize - canvas.height / 2;
