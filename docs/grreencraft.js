@@ -232,24 +232,18 @@ if (skyTex && skyTex.complete) {
     // PLAYER
     const ptex = textures.player;
 
+const drawWidth = 16;
+const drawHeight = 32;
+
+const screenX = canvas.width / 2 - drawWidth / 2;
+const screenY = canvas.height / 2 - drawHeight / 2;
+
 if (ptex && ptex.complete) {
-  ctx.drawImage(
-    ptex,
-    canvas.width / 2 - blockSize / 2,
-    canvas.height / 4 - blockSize / 4,
-    blockSize,
-    blockSize
-  );
+  ctx.drawImage(ptex, screenX, screenY, drawWidth, drawHeight);
 } else {
   ctx.fillStyle = "green";
-  ctx.fillRect(
-    canvas.width / 2 - blockSize / 2,
-    canvas.height / 4 - blockSize / 4,
-    blockSize,
-    blockSize
-  );
+  ctx.fillRect(screenX, screenY, drawWidth, drawHeight);
 }
-
   }
 }
 
