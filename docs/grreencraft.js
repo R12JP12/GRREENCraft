@@ -232,8 +232,8 @@ if (skyTex && skyTex.complete) {
     // PLAYER
     const ptex = textures.player;
 
-const drawWidth = 16;
-const drawHeight = 32;
+const drawWidth = 32;
+const drawHeight = 64;
 
 const screenX = canvas.width / 2 - drawWidth / 2;
 const screenY = canvas.height / 2 - drawHeight / 2;
@@ -259,8 +259,8 @@ class GRPlayer {
     this.jumpForce = -0.25;
     this.grounded = false;
 
-    this.width = 16 / 48;  // scaled to block units
-    this.height = 32 / 48; // scaled to block units
+    this.width = 32 / 96;  // scaled to block units
+    this.height = 64 / 96; // scaled to block units
   }
 }
 
