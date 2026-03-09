@@ -332,7 +332,7 @@ if (!isSolid(world, Math.floor(player.x), Math.floor(nextY)) &&
     !isSolid(world, Math.floor(player.x + player.width), Math.floor(nextY))) {
 
       player.y = nextY;
-      player.grounded = false;
+      player.grounded = true;
     } else {
       if (player.vy > 0) {
         player.y = Math.floor(player.y);
