@@ -322,11 +322,15 @@ window.addEventListener("load", () => {
     let nextX = player.x + player.vx;
     let nextY = player.y + player.vy;
 
-    if (!isSolid(world, Math.floor(nextX), Math.floor(player.y))) {
+   if (!isSolid(world, Math.floor(nextX), Math.floor(player.y)) &&
+    !isSolid(world, Math.floor(nextX), Math.floor(player.y + player.height))) {
+
       player.x = nextX;
     }
 
-    if (!isSolid(world, Math.floor(player.x), Math.floor(nextY))) {
+if (!isSolid(world, Math.floor(player.x), Math.floor(nextY)) &&
+    !isSolid(world, Math.floor(player.x + player.width), Math.floor(nextY))) {
+
       player.y = nextY;
       player.grounded = false;
     } else {
